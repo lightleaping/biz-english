@@ -1,0 +1,11 @@
+.gradle/
+build/
+out/
+!.mvn/wrapper/maven-wrapper.jar
+!.gradle/wrapper/gradle-wrapper.jar
+*.iml
+*.log
+*.tmp
+*.class
+.DS_Store
+.idea/
