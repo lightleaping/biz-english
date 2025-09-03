@@ -1,0 +1,73 @@
+{
+  "code": "PRJ_DELAY_REPORT_V1",
+  "title": "프로젝트 지연 보고 (Business English)",
+  "description": "PM에게 일정 지연을 비즈니스 톤으로 보고하고, 리스크와 액션을 제시한다.",
+  "stages": [
+    {
+      "name": "Opening",
+      "content": "Hi [Manager Name], I’d like to give you a quick update on the timeline...",
+      "orderNo": 1,
+      "isTerminal": false,
+      "choices": [
+        {
+          "text": "Lead with context + ownership",
+          "scoreDelta": 2,
+          "hint": "간단한 배경 + 책임 인정",
+          "next": "RiskSummary"
+        },
+        {
+          "text": "Blame vendor first",
+          "scoreDelta": -2,
+          "hint": "책임 전가 시작은 비추천",
+          "next": "RiskSummary"
+        }
+      ]
+    },
+    {
+      "name": "RiskSummary",
+      "content": "We’re currently one week behind due to integration issues with the payment gateway...",
+      "orderNo": 2,
+      "isTerminal": false,
+      "choices": [
+        {
+          "text": "Propose concrete mitigation (parallelize tests, add hotfix slot)",
+          "scoreDelta": 3,
+          "hint": "구체적 액션 제시",
+          "next": "AskSupport"
+        },
+        {
+          "text": "Vague promise to catch up",
+          "scoreDelta": -1,
+          "hint": "모호한 표현은 신뢰 저하",
+          "next": "AskSupport"
+        }
+      ]
+    },
+    {
+      "name": "AskSupport",
+      "content": "To get back on track, we need your help to prioritize...",
+      "orderNo": 3,
+      "isTerminal": false,
+      "choices": [
+        {
+          "text": "Ask to de-scope non-critical features",
+          "scoreDelta": 2,
+          "next": "Closing"
+        },
+        {
+          "text": "Ask for additional reviewers",
+          "scoreDelta": 1,
+          "next": "Closing"
+        }
+      ]
+    },
+    {
+      "name": "Closing",
+      "content": "If you agree, we can proceed with the adjusted plan and share a revised timeline by EOD.",
+      "orderNo": 4,
+      "isTerminal": true,
+      "choices": []
+    }
+  ],
+  "first": "Opening"
+}
