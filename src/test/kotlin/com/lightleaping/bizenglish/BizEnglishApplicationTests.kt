@@ -1,4 +1,4 @@
-package com.lightleaping.biz_english
+package com.lightleaping.bizenglish
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

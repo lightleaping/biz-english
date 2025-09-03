@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.lightleaping.biz-english' is invalid and this project uses 'com.lightleaping.biz_english' instead.
+* The original package name 'com.lightleaping.biz-english' is invalid and this project uses 'com.lightleaping.bizenglish' instead.
 
 # Getting Started
 

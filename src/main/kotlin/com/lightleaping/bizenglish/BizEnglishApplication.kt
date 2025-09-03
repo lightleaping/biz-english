@@ -1,4 +1,4 @@
-package com.lightleaping.biz_english
+package com.lightleaping.bizenglish
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
